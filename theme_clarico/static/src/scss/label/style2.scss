@@ -1,0 +1,30 @@
+.te_ribbon-wrapper {
+    color: nth($f_color,05);
+    .label_div {
+        padding: 0 4px 0 8px;
+        @include position(absolute,20px,null,null,-8px);
+        background: rgba($product-label,0.7);
+        z-index: 1;
+        &:before{
+            content: "";
+            @include position(absolute,-7px,null,null,0px);
+            height: 0;
+            width: 0;
+            border-bottom: 7px solid rgba($product-label,0.8);
+            border-left: 9px solid transparent;
+        }
+        &:after{
+            content: "";
+            @include position(absolute,0px,-10px);
+            height: 0;
+            width: 0;
+            border-top: 13px solid transparent;
+            border-bottom: 14px solid transparent;
+            border-left: 10px solid rgba($product-label,0.7);
+        }
+        .te_label_name {
+            font-size: 0.8rem;
+            padding-left: 0px !important;
+        }
+    }
+}

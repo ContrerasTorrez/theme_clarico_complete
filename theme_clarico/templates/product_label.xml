@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="clarico_product_page_label" inherit_id="website_sale.shop_product_carousel"
+              priority="23">
+        <xpath expr="//div[hasclass('carousel-inner')]" position="after">
+            <t t-if="request.website.viewref('theme_clarico.clarico_shop_products_label').active">
+                <div t-if="product.label_line_ids">
+                    <t t-foreach="product.label_line_ids" t-as="labels">
+                        <t t-if="labels.website_id.id == website.id">
+                            <div class="te_ribbon-wrapper">
+                                <div class="label_div">
+                                    <div class="p-1 te_label_name te_label_name" t-field="labels.label.name"/>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+    <!--===================== Shop Product label style 1 / style 2 / style 3 =========================-->
+    <template id="clarico_shop_products_label" inherit_id="website_sale.products_item"
+              priority="23" active="True">
+        <xpath expr="//div[hasclass('ribbon-wrapper')]" position="replace">
+            <div t-if="product.label_line_ids">
+                <t t-foreach="product.label_line_ids" t-as="labels">
+                    <t t-if="labels.website_id.id == website.id">
+                        <div class="te_ribbon-wrapper">
+                            <div class="label_div">
+                                <div class="p-1 te_label_name te_label_name" t-field="labels.label.name"/>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </xpath>
+    </template>
+    <!--===================== Shop Product label style 4=========================-->
+    <template id="clarico_shop_products_label4" inherit_id="website_sale.products_item"
+              priority="23" active="False">
+        <xpath expr="//div[hasclass('ribbon-wrapper')]" position="replace">
+            <div t-if="product.label_line_ids">
+                <t t-foreach="product.label_line_ids" t-as="labels">
+                    <t t-if="labels.website_id.id == website.id">
+                        <div class="te_ribbon-wrapper">
+                            <div class="label_div">
+                                <span>
+                                    <div class="p-1 te_label_name" t-field="labels.label.name"/>
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

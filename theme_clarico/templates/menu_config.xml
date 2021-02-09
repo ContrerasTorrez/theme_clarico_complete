@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============= Dynamic category listing based on is_dynamic_menu is enable/disable  =========== -->
+    <template id="website_submenu_ept" inherit_id="website.submenu">
+        <xpath expr="//li[@t-if='submenu.is_visible and not has_visible_submenu']" position="inside">
+            <t t-if="submenu.is_dynamic_menu">
+                <t t-call="theme_clarico.website_dynamic_category"/>
+            </t>
+        </xpath>
+        <xpath expr="//li[@t-if='has_visible_submenu']//a" position="replace">
+            <a t-attf-class="#{link_class or ''} dropdown-toggle #{submenu.is_mega_menu and 'o_mega_menu_toggle'}" data-toggle="dropdown" t-att-href="submenu.url or '#'">
+                <span t-field="submenu.name"/>
+            </a>
+        </xpath>
+    </template>
+    <template id="website_dynamic_category">
+        <ul id="custom_menu" class="dropdown-menu te_custom_submenu o_mega_menu">
+            <t t-set="category_fetch" t-value="website.category_check()"></t>
+            <t t-foreach="category_fetch" t-as="c">
+                <t t-call="theme_clarico.web_categories_recursive"></t>
+            </t>
+        </ul>
+    </template>
+    <template id="web_categories_recursive">
+        <li id="custom_menu_li" class="nav-item">
+            <a t-att-href="'/shop/category/%s' %slug(c)"
+               t-attf-class="nav-link #{' active' if c.id == int(category or 0) else ''}">
+                <span t-field="c.name"/>
+            </a>
+            <ul t-if="c.child_id" id="custom_recursive" class="t_custom_subctg">
+                <li class="te_prent_ctg_heading">
+                    <a>
+                        <span class="fa fa-angle-left pull-left py-1"></span>
+                        <span class="te_t_parent_ctg" t-field="c.name"></span>
+                    </a>
+                </li>
+                <t t-foreach="c.child_id" t-as="c">
+                    <t>
+                        <t t-call="theme_clarico.web_categories_recursive"/>
+                    </t>
+                </t>
+            </ul>
+        </li>
+    </template>
+</odoo>

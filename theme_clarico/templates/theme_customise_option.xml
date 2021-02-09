@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================ Added new custom Header in customize option ================ -->
+    <template id="theme_customize_ept" inherit_id="website.theme_customize">
+        <xpath expr="//content[@id='theme_customize_content_fonts']"
+               position="after">
+            <!-- Button  Styles-->
+            <content id="theme_customize_content_button" string="Buttons"
+                     title="Choose your Button styles">
+                <more data-depends="">
+                    <list string="CMS Blocks Buttons">
+                        <opt data-xmlid="theme_clarico.option_s_button_01_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g1-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_02_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g2-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_03_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g3-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_04_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g4-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_05_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g5-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_06_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g6-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_07_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g7-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_08_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g8-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_09_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g9-16.gif" string=" "/>
+                        <opt data-xmlid="theme_clarico.option_s_button_10_assets"
+                             data-icon="/theme_clarico/static/src/img/customise_option/g10-16.gif" string=" "/>
+                    </list>
+                </more>
+            </content>
+            <!-- Header Styles-->
+            <content id="theme_customize_content_header" string="Headers" title="Choose your Header styles">
+                <more data-depends="">
+                    <list>
+                        <opt data-xmlid="theme_clarico.option_header_01_assets,theme_clarico.customize_header_style_1"
+                                data-icon="/theme_clarico/static/src/img/customise_option/h_style-1.jpg" data-reload="/"
+                                string=" "/>
+                        <opt data-xmlid="theme_clarico.option_header_02_assets,theme_clarico.customize_header_style_2"
+                                data-icon="/theme_clarico/static/src/img/customise_option/h_style-2.jpg" data-reload="/"
+                                string=" "/>
+                        <opt data-xmlid="theme_clarico.option_header_03_assets,theme_clarico.customize_header_style_3"
+                                data-icon="/theme_clarico/static/src/img/customise_option/h_style-3.jpg" data-reload="/"
+                                string=" "/>
+                        <opt data-xmlid="theme_clarico.option_header_04_assets,theme_clarico.customize_header_style_4"
+                                data-icon="/theme_clarico/static/src/img/customise_option/h_style-4.jpg" data-reload="/"
+                                string=" "/>
+                        <opt data-xmlid="theme_clarico.option_header_05_assets,theme_clarico.customize_header_style_5"
+                                data-icon="/theme_clarico/static/src/img/customise_option/h_style-5.jpg" data-reload="/"
+                                string=" "/>
+                        <opt data-xmlid="theme_clarico.option_header_06_assets,theme_clarico.customize_header_style_6"
+                                data-icon="/theme_clarico/static/src/img/customise_option/h_style-6.jpg" data-reload="/"
+                                string=" "/>
+                        <opt data-xmlid="theme_clarico.option_header_07_assets,theme_clarico.customize_header_style_7"
+                                data-icon="/theme_clarico/static/src/img/customise_option/h_style-7.jpg" data-reload="/"
+                                string=" "/>
+                    </list>
+                </more>
+            </content>
+            <!-- Footer Styles-->
+            <content id="theme_customize_content_footer" string="Footers" title="Choose your Footer styles">
+                <more data-depends="">
+                    <list>
+                        <opt data-xmlid="theme_clarico.option_footer_01_assets,theme_clarico.customize_footer_style_1"
+                             data-reload="/" data-icon="/theme_clarico/static/src/img/customise_option/footer_1.jpg"
+                             string=" "/>
+                        <opt data-xmlid="theme_clarico.option_footer_02_assets,theme_clarico.customize_footer_style_2"
+                             data-reload="/" data-icon="/theme_clarico/static/src/img/customise_option/footer_2.jpg"
+                             string=" "/>
+                        <opt data-xmlid="theme_clarico.option_footer_03_assets,theme_clarico.customize_footer_style_3"
+                             data-reload="/" data-icon="/theme_clarico/static/src/img/customise_option/footer_3.jpg"
+                             string=" "/>
+                    </list>
+                </more>
+            </content>
+            <!-- Theme Configurations Added by dharmik-->
+            <content id="theme_configuration" string="Theme Settings"
+                     title="Manage Theme Features">
+                <list>
+                    <checkbox>
+                        <opt data-xmlid="theme_clarico.ajax_add_to_cart" data-reload="/"
+                             string="AJAX Shopping Cart"/>
+                    </checkbox>
+                    <checkbox>
+                        <opt data-xmlid="theme_clarico.quickview_icon_shop_product_item" data-reload="/"
+                             string="Quick View"/>
+                    </checkbox>
+                    <checkbox>
+                        <opt data-xmlid="theme_clarico.website_pricefilter_ept" data-reload="/"
+                             string="Price Filter"/>
+                    </checkbox>
+                    <checkbox>
+                        <opt data-xmlid="theme_clarico.website_attribute_values_count_ept" data-reload="/"
+                             string="Product Count In Shop Filter"/>
+                    </checkbox>
+                    <checkbox>
+                        <opt data-xmlid="theme_clarico.display_product_associate_attribute_value_ept" data-reload="/"
+                             string="show Associated Attribute Values"/>
+                    </checkbox>
+                </list>
+                <list>
+                    <checkbox>
+                        <opt data-xmlid="theme_clarico.load_products_through_ajax" data-reload="/"
+                             string="Load Products Through Ajax"/>
+                    </checkbox>
+                     <checkbox>
+                        <opt data-xmlid="theme_clarico.product_brand_attribute_custom" data-reload="/"
+                             string="Product Brand"/>
+                     </checkbox>
+                    <checkbox>
+                        <opt data-xmlid="theme_clarico.menu_vertical" data-reload="/"
+                             string="Vertical Menu"/>
+                    </checkbox>
+                </list>
+                <!-- Product Label Styles Added by Hiral-->
+                <list string="Product Label">
+                    <checkbox>
+                        <opt data-xmlid="theme_clarico.clarico_shop_products_label" data-reload="/"
+                             string="Product Label"/>
+                    </checkbox>
+                    <more data-depends="">
+                        <list>
+                            <opt data-widget="color" data-color="product_label" string="Color of Label"/>
+                            <opt data-xmlid="theme_clarico.product_label_01_assets,theme_clarico.clarico_shop_products_label"
+                                 data-icon="/theme_clarico/static/src/img/customise_option/Style-1.jpg" data-reload="/"
+                                string=" "/>
+                            <opt data-xmlid="theme_clarico.product_label_02_assets,theme_clarico.clarico_shop_products_label"
+                                 data-icon="/theme_clarico/static/src/img/customise_option/Style-2.jpg" data-reload="/"
+                                 string=" "/>
+                            <opt data-xmlid="theme_clarico.product_label_03_assets,theme_clarico.clarico_shop_products_label"
+                                 data-icon="/theme_clarico/static/src/img/customise_option/Style-3.jpg" data-reload="/"
+                                 string=" "/>
+                        </list>
+                    </more>
+                </list>
+                <!-- End by Hiral -->
+            </content>
+            <!-- End by dharmik -->
+        </xpath>
+        <xpath expr="//content[@id='theme_customize_content_colors']//list[1]//opt[5]"
+               position="replace">
+        </xpath>
+        <xpath expr="//content[@id='theme_customize_content_colors']//list[4]"
+               position="after">
+            <list string="Header">
+                <opt data-widget="color" data-color-type="theme" data-color="gamma" string="Header Text Color"/>
+                <opt data-widget="color" data-color="header_text_hover_color" string="Header Text Hover Color"/>
+            </list>
+            <list string="Footer">
+                <opt data-widget="color" data-color="footer_text_color" string="Footer Text Color"/>
+            </list>
+        </xpath>
+    </template>
+
+</odoo>

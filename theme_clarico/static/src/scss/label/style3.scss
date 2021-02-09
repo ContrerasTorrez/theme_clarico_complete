@@ -1,0 +1,38 @@
+.te_ribbon-wrapper {
+    color:nth($f_color,05);
+    z-index: 1;
+    .label_div {
+        padding: 1px 4px;
+        @include position(absolute,10px,0);
+        background: rgba($product-label,0.7);
+        z-index: 1;
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            z-index: 0;
+            @include position(absolute,null,100%,0);
+            border-width: 0 0 16px 14px;
+            border-color: transparent transparent rgba($product-label,0.7) transparent;
+        }
+
+        &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            z-index: 0;
+            @include position(absolute,0px,100%);
+            border-color: transparent rgba($product-label,0.7) transparent transparent;
+            border-width: 0 14px 16px 0;
+        }
+        .te_label_name {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+#products_grid .oe_product_image {
+    @include position(relative);
+}

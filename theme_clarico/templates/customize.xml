@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================== Button Style Assets============ -->
+    <!-- Button Style 1 -->
+    <template id="option_s_button_01_assets" inherit_id="website.assets_frontend"
+              active="True" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style1.scss"/>
+        </xpath>
+    </template>
+    <!-- Button Style 2 -->
+    <template id="option_s_button_02_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style2.scss"/>
+        </xpath>
+    </template>
+    <!-- Button Style 3 -->
+    <template id="option_s_button_03_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style3.scss"/>
+        </xpath>
+    </template>
+    <template id="option_s_button_04_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style4.scss"/>
+        </xpath>
+    </template>
+    <template id="option_s_button_05_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style5.scss"/>
+        </xpath>
+    </template>
+    <template id="option_s_button_06_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style6.scss"/>
+        </xpath>
+    </template>
+    <template id="option_s_button_07_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style7.scss"/>
+        </xpath>
+    </template>
+    <template id="option_s_button_08_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style8.scss"/>
+        </xpath>
+    </template>
+    <template id="option_s_button_09_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style9.scss"/>
+        </xpath>
+    </template>
+    <template id="option_s_button_10_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/button/style10.scss"/>
+        </xpath>
+    </template>
+    <!-- ================== Header style assets============ -->
+    <template id="option_header_01_assets" inherit_id="website.assets_frontend"
+    priority="17">
+    <xpath expr="//link[last()]" position="after">
+      <link rel="stylesheet" type="text/scss"
+        href="/theme_clarico/static/src/scss/header/style1.scss" />
+    </xpath>
+  </template>
+  <template id="option_header_02_assets" inherit_id="website.assets_frontend"
+    active="False" priority="17">
+    <xpath expr="//link[last()]" position="after">
+      <link rel="stylesheet" type="text/scss"
+        href="/theme_clarico/static/src/scss/header/style2.scss" />
+    </xpath>
+  </template>
+  <template id="option_header_03_assets" inherit_id="website.assets_frontend"
+    active="False" priority="17">
+    <xpath expr="//link[last()]" position="after">
+      <link rel="stylesheet" type="text/scss"
+        href="/theme_clarico/static/src/scss/header/style3.scss" />
+    </xpath>
+  </template>
+  <template id="option_header_04_assets" inherit_id="website.assets_frontend"
+    active="False" priority="17">
+    <xpath expr="//link[last()]" position="after">
+      <link rel="stylesheet" type="text/scss"
+        href="/theme_clarico/static/src/scss/header/style4.scss" />
+    </xpath>
+  </template>
+  <template id="option_header_05_assets" inherit_id="website.assets_frontend"
+    active="False" priority="17">
+    <xpath expr="//link[last()]" position="after">
+      <link rel="stylesheet" type="text/scss"
+        href="/theme_clarico/static/src/scss/header/style5.scss" />
+    </xpath>
+  </template>
+  <template id="option_header_06_assets" inherit_id="website.assets_frontend"
+    active="False" priority="17">
+    <xpath expr="//link[last()]" position="after">
+      <link rel="stylesheet" type="text/scss"
+        href="/theme_clarico/static/src/scss/header/style6.scss" />
+    </xpath>
+  </template>
+  <template id="option_header_07_assets" inherit_id="website.assets_frontend"
+    active="False" priority="17">
+    <xpath expr="//link[last()]" position="after">
+      <link rel="stylesheet" type="text/scss"
+        href="/theme_clarico/static/src/scss/header/style7.scss" />
+    </xpath>
+  </template>
+    <!-- ================== Footer style assets============ -->
+    <template id="option_footer_01_assets" inherit_id="website.assets_frontend"
+              active="True" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/footer/style1.scss"/>
+        </xpath>
+    </template>
+    <template id="option_footer_02_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/footer/style2.scss"/>
+        </xpath>
+    </template>
+    <template id="option_footer_03_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/footer/style3.scss"/>
+        </xpath>
+    </template>
+    <!-- ================== Product Label style assets============ -->
+    <template id="product_label_01_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/label/style1.scss"/>
+        </xpath>
+    </template>
+    <template id="product_label_02_assets" inherit_id="website.assets_frontend"
+              active="True" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/label/style2.scss"/>
+        </xpath>
+    </template>
+    <template id="product_label_03_assets" inherit_id="website.assets_frontend"
+              active="False" priority="17">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss"
+                  href="/theme_clarico/static/src/scss/label/style3.scss"/>
+        </xpath>
+    </template>
+</odoo>

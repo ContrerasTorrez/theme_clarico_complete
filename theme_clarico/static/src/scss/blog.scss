@@ -1,0 +1,284 @@
+/*******************************************************
+			01. Latest Blog Big Picture
+			02. Latest Blog List
+			03. Blog Post List / Grid
+			    Top navigation for category
+			04. Complete Blog
+*******************************************************/
+/*============================ 01. Latest Blog Big Picture ===========================*/
+
+.te_latest_posts_big_picture.s_latest_posts_big_picture {
+    .s_latest_posts_post {
+        min-height: 300px;
+        overflow: hidden;
+
+        &:hover {
+
+            &:before {
+               animation: effect_shine 1s;
+            }
+        }
+        &:before {
+            @include position(absolute,0,auto,auto,-100%);
+            content: "";
+            z-index: 1;
+            display: block;
+            width: 50%;
+            height: 100%;
+            background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+            background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%);
+            -webkit-transform: skewX(-25deg);
+            -moz-transform: skewX(-25deg);
+            -ms-transform: skewX(-25deg);
+            -o-transform: skewX(-25deg);
+            transform: skewX(-25deg);
+        }
+        .te_latest_post_date {
+            > span {
+                 @include position(absolute,5px,5px);
+                 background: nth($f_color,19);
+                 color: nth($f_color,5);
+                 padding: 4px 6px;
+                 border-radius: 5px;
+            }
+        }
+        .te_icon_r_more {
+            @include position(absolute,null,10px,10px);
+            background: nth($f_color,5);
+            padding: 3px 7px 2px 7px;
+            border-radius: 20px;
+            color: nth($f_color,19);
+            font-weight: normal;
+            z-index: 1;
+            @include transition(all,0.4s,ease-in-out);
+
+            &:hover {
+                right: 5px;
+            }
+        }
+        figcaption {
+            z-index: 1;
+            .s_latest_posts_post_subtitle {
+                @include transition(all,0.4s,ease-in-out);
+            }
+        }
+    }
+    .te_blog_heading
+    {
+        font-weight: bold;
+        color:nth($f_color,3);
+        text-align: center;
+    }
+}
+@-webkit-keyframes effect_shine {
+  100% {
+    left: 150%; } }
+
+@keyframes effect_shine {
+  100% {
+    left: 150%; } }
+.s_latest_posts_post_cover
+{
+    .o_record_cover_container
+    {
+        .o_record_cover_filter
+        {
+            opacity: 0.2 !important;
+        }
+    }
+}
+ /*=========================== 02. Latest Blog List =============================*/
+.s_latest_posts.te_latest_posts_snippet {
+    .s_latest_posts_post_cover {
+        height: 100px;
+        width: 100px;
+        max-width: unset;
+        max-height: unset;
+        margin-right: 0.8rem;
+    }
+    .s_latest_posts_post_title {
+        font-size: 1.25rem;
+        line-height: 1.4;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 1.15rem;
+        }
+    }
+    .s_latest_posts_post_subtitle {
+        font-size: 0.875rem;
+        color: inherit;
+        margin: 0.4rem 0 !important;
+    }
+
+}
+
+ /*========================= 03. Blog Post List / Grid =======================================*/
+.te_opt_blog_design {
+    .col-md-6.col-xl-4 {
+        .o_wblog_post {
+            @include border(1px,17,solid);
+            @include transition(all,.4s);
+
+            &:hover {
+                @include box-shadow(0 1px 10px nth($f_color,11));
+            }
+            > div {
+                padding: 0 0.8rem;
+            }
+            .o_blog_post_title {
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+    .o_wblog_list_view {
+        .mb-5 {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 0.5rem !important;
+            }
+        }
+    }
+    .badge {
+        font-size: 0.8rem;
+        font-weight: normal;
+        color: nth($f_color,03);
+        padding: 8px 20px 8px 23px;
+        @include position(relative);
+        background: #eee;
+
+        &:before {
+            content: '';
+            @include position(absolute,10px,null,auto,10px);
+            height: 6px;
+            width: 6px;
+            background: nth($f_color,05);
+            border-radius: 10px;
+            box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+        }
+
+        &:after {
+            content: '';
+            @include position(absolute,-1px,-1px);
+            background: nth($f_color,05);
+            border-bottom: 15px solid transparent;
+            border-left: 14px solid #eee;
+            border-top: 15px solid transparent;
+        }
+
+        &:hover {
+            color: nth($f_color,19);
+        }
+    }
+}
+#o_wblog_sidebar {
+    .o_wblog_sidebar_block {
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 1.5rem !important;
+        }
+        h6 {
+            margin-bottom: 0.5rem !important;
+        }
+        p {
+            @include media-breakpoint-down(md) {
+                font-size: 0.9rem;
+                line-height: 22px;
+            }
+        }
+    }
+}
+#o_wblog_next_container {
+    .bg-gamma {
+        background-color: nth($f_color,19) !important;
+        color: nth($f_color,05);
+        margin: 0 auto;
+    }
+}
+/*----------- Top navigation for category -------------*/
+.website_blog {
+    .navbar-light{
+        .navbar-nav {
+            .nav-link {
+                &:hover, &:focus {
+                    color: nth($f_color,19);
+                }
+            }
+        }
+    }
+}
+
+
+/*=========================== 04. Complete Blog =============================*/
+
+#o_wblog_post_main {
+    #o_wblog_post_content {
+        max-width: 720px;
+        .badge {
+            font-size: 0.8rem;
+            font-weight: normal;
+            color: nth($f_color,03);
+            padding: 8px 20px 8px 23px;
+            @include position(relative);
+            background: #eee;
+
+            &:before {
+                content: '';
+                @include position(absolute,10px,null,auto,10px);
+                height: 6px;
+                width: 6px;
+                background: nth($f_color,05);
+                border-radius: 10px;
+                box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+            }
+
+            &:after {
+                content: '';
+                @include position(absolute,-1px,-1px);
+                background: nth($f_color,05);
+                border-bottom: 15px solid transparent;
+                border-left: 14px solid #eee;
+                border-top: 15px solid transparent;
+            }
+
+            &:hover {
+                color: nth($f_color,19);
+            }
+        }
+        .blockquote-footer {
+            color: nth($f_color,20);
+        }
+        .o_wblog_post_content_field p.lead {
+            font-size: 1rem;
+            line-height: 28px;
+            margin-bottom: 1rem;
+
+            .blockquote {
+                margin: 1rem 0 !important;
+            }
+        }
+    }
+}
+.te_opt_blog_design
+{
+	.o_record_cover_container
+	{
+		&:before {
+			content: '';
+			@include position(absolute,0,auto,auto,-61%);
+			z-index: 1;
+			display: block;
+			width: 50%;
+			height: 100%;
+			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+			@include transform(skewX(-25deg));
+		}
+		&:hover
+		{
+			&:before {
+				@include animation(0, 1.4s, effect_shine);
+			}
+		}
+	}
+}

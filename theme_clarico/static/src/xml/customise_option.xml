@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <templates id="template" xml:space="preserve">
+     <t t-extend="website.theme_customize_modal_option">
+        <t t-jquery=".o_theme_customize_color_previews div:first-child" t-operation="replace">
+           <div>
+                <h6>Theme colors</h6>
+                <t t-foreach="{'primary': _t('Primary'), 'secondary': _t('Secondary'), 'success': _t('Success'), 'danger': _t('Danger'), 'warning': _t('Warning'),'info': _t('Info')}" t-as="color">
+                    <t t-call="website.theme_customize_color_palette_button">
+                        <t t-set="color_type" t-value="'theme'"/>
+                    </t>
+                </t>
+            </div>
+        </t>
+        <t t-jquery=".o_theme_customize_color_previews div:last-child" t-operation="replace">
+        </t>
+         <t t-jquery="#o_link_dialog_url_input" t-operation="after">
+            <small class="form-text text-muted">Hint: Type '/' to search an existing page and '#' to link to an anchor.</small>
+        </t>
+     </t>
+    <!--  Add checkbox option for choose dynamic menu  -->
+     <t t-extend="wysiwyg.widgets.link">
+        <t t-jquery=".form-group.row.o_url_input:not(d-none)" t-operation="after">
+            <div class="form-group row dynamic_menu_option">
+                <label class="control-label col-md-3" for="is_dynamic_menu">Is Dynamic Menu</label>
+                <div class="col-sm-2">
+                    <label class="o_switch" for="is_dynamic_menu">
+                        <input type="checkbox" name="is_dynamic_menu" id="is_dynamic_menu" t-att-checked="widget.data.is_dynamic_menu ? 'checked' : undefined"/>
+                        <span/>
+                    </label>
+                </div>
+            </div>
+        </t>
+     </t>
+</templates>

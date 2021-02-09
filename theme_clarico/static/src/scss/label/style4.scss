@@ -1,0 +1,46 @@
+.te_ribbon-wrapper {
+    color: nth($f_color,05);
+    .label_div {
+        @include position(absolute,-6px,10px);
+        z-index: 1;
+        &:after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-top: 11px solid $product-label;
+            @include position(absolute,null,null,-11px,0px);
+        }
+        >span {
+            @include position(relative);
+            display: inline-block;
+            background: $product-label;
+            padding: 4px 7px;
+            border-top-right-radius: 8px;
+            line-height: 1;
+            width: 80px;
+            text-align: center;
+
+            &:before{
+                content: "";
+                height: 6px;
+                width: 6px;
+                @include position(absolute,0px,null,null,-6px);
+                background: $product-label;
+            }
+            &:after{
+                content: "";
+                height: 6px;
+                width: 8px;
+                @include position(absolute,0px,null,null,-8px);
+                border-radius: 8px 8px 0 0;
+                background: $product-label-dark;
+            }
+
+            .te_label_name {
+                padding-bottom: 0 !important;
+            }
+        }
+    }
+}
